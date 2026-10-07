@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshit Jangid | B.Tech CSE Student &amp; Aspiring Backend Developer</title>
+  <meta name="description" content="Personal portfolio of Harshit Jangid, B.Tech CSE (Core) 1st-year student at JECRC University, Jaipur. Aspiring Backend Developer &amp; AI Enthusiast." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Bright Colorful Ambient Background -->
+  <canvas id="constellation-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-blob blob-sky" aria-hidden="true"></div>
+  <div class="ambient-blob blob-pink" aria-hidden="true"></div>
+  <div class="ambient-blob blob-mint" aria-hidden="true"></div>
+  <div class="ambient-blob blob-amber" aria-hidden="true"></div>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="navbar-wrapper" id="top">
+    <nav class="navbar" aria-label="Primary Navigation">
+      <a href="#home" class="nav-brand" aria-label="Harshit Jangid Home">
+        <img src="profile.png" alt="Harshit Jangid" class="nav-avatar" />
+        <span class="brand-text">Harshit<span class="accent-dot">.dev</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#certifications" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-utility-btn" id="toggle-expand-all" title="Expand or collapse all block details" aria-pressed="false">
+          <span class="utility-dot"></span>
+          <span class="utility-label">Expand All</span>
+        </button>
+        <button type="button" class="hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <!-- ==================== 1. HOME / HERO SECTION ==================== -->
+    <section id="home" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-pills-row">
+            <span class="vibrant-pill pill-indigo">
+              <span class="pulse-dot"></span> JECRC University &bull; 1st Year
+            </span>
+            <span class="vibrant-pill pill-rose">📍 Jaipur, India</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-name">Harshit Jangid</span>
+          </h1>
+
+          <p class="hero-tagline">
+            B.Tech CSE Student | Aspiring Backend Developer | AI Enthusiast
+          </p>
+
+          <p class="hero-subtext">
+            Problem solver blending <span class="highlight-inline">Python</span>, <span class="highlight-inline">real-life experience</span>, and <span class="highlight-inline">AI tools</span> to build practical projects. Hover over any organized block below to expand full details.
+          </p>
+
+          <!-- Primary CTA & Social Buttons in Hero -->
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+            <a href="https://github.com/calsiummmm" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="GitHub Profile">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+              <span class="external-arrow">↗</span>
+            </a>
+            <a href="https://www.linkedin.com/in/harshit-jangid-8221cals" target="_blank" rel="noopener noreferrer" class="btn btn-social" aria-label="LinkedIn Profile">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+              </svg>
+              <span>LinkedIn</span>
+              <span class="external-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Profile Portrait Card -->
+        <div class="hero-visual">
+          <div class="profile-showcase-card">
+            <div class="orbit-badge badge-tl">🐍 Python</div>
+            <div class="orbit-badge badge-tr">✨ AI Native</div>
+            <div class="orbit-badge badge-bl">🧩 Problem Solver</div>
+            <div class="orbit-badge badge-br">⚙️ Backend</div>
+
+            <div class="avatar-ring-wrap">
+              <img src="profile.png" alt="Portrait of Harshit Jangid" class="hero-portrait-img" />
+            </div>
+
+            <div class="profile-card-caption">
+              <strong>Harshit Jangid</strong>
+              <span>B.Tech CSE (Core) &bull; JECRC University</span>
+              <div class="live-status-chip" id="terminal-live-output">
+                🚀 Exploring tech &amp; building projects
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ORGANIZED COMPACT BENTO GRID ==================== -->
+    <div class="bento-grid" id="bento-grid">
+
+      <!-- BLOCK 1: ABOUT ME (5 Cols) -->
+      <section id="about" class="bento-block theme-indigo block-about">
+        <div class="block-header">
+          <div class="block-title-group">
+            <span class="block-icon-badge">👋</span>
+            <div>
+              <h2 class="block-title">About Me</h2>
+              <p class="block-concise">AI-driven problem solver &amp; Python learner</p>
+            </div>
+          </div>
+          <span class="hover-pill">Hover +</span>
+        </div>
+
+        <!-- Compact 3-4 word summary pills visible at rest -->
+        <div class="compact-pills-row">
+          <span class="compact-pill pill-v-indigo">🧠 Practical Problem Solver</span>
+          <span class="compact-pill pill-v-pink">🤖 AI Tools Fluency</span>
+          <span class="compact-pill pill-v-emerald">🐍 Completed Python</span>
+          <span class="compact-pill pill-v-amber">⚙️ Learning Backend</span>
+        </div>
+
+        <!-- Expandable Full Bio on Hover -->
+        <div class="block-expand-area">
+          <div class="block-expand-inner">
+            <p class="about-core-quote">
+              “I am a problem solver who works very well with AI tools, and I have a lot of real-life experience for my age. I just completed Python and I am learning backend development. I am exploring many areas of tech to find my path.”
+            </p>
+            <div class="about-mini-points">
+              <div class="mini-point">
+                <strong>Real-Life Maturity:</strong> Practical street smarts and adaptability beyond textbook theory.
+              </div>
+              <div class="mini-point">
+                <strong>AI Co-Engineering:</strong> Turning raw ideas into working apps rapidly through smart prompting.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOCK 2: SKILLS (7 Cols) -->
+      <section id="skills" class="bento-block theme-sky block-skills">
+        <div class="block-header">
+          <div class="block-title-group">
+            <span class="block-icon-badge">⚡</span>
+            <div>
+              <h2 class="block-title">Skills</h2>
+              <p class="block-concise">Core programming, AI prompting &amp; logic</p>
+            </div>
+          </div>
+          <span class="hover-pill">Hover skills +</span>
+        </div>
+
+        <!-- Compact Skill Badges: Title + 3-4 word summary at rest; expands on hover -->
+        <div class="skills-mosaic">
+          <!-- Skill 1: Python -->
+          <article class="skill-card sc-emerald" tabindex="0">
+            <div class="skill-card-head">
+              <span class="skill-name">🐍 Python</span>
+              <span class="skill-status-badge completed">Done</span>
+            </div>
+            <p class="skill-micro-summary">Core scripting &amp; clean logic</p>
+            <div class="skill-expand-box">
+              <div class="skill-expand-inner">
+                <p class="skill-explanation">
+                  Completed Python programming course—comfortable with functions, loops, data structures, and automation scripts.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill 2: Problem Solving -->
+          <article class="skill-card sc-blue" tabindex="0">
+            <div class="skill-card-head">
+              <span class="skill-name">🧩 Problem Solving</span>
+              <span class="skill-status-badge core">Core</span>
+            </div>
+            <p class="skill-micro-summary">Real-world analytical breakdown</p>
+            <div class="skill-expand-box">
+              <div class="skill-expand-inner">
+                <p class="skill-explanation">
+                  Deconstructs tricky problems into simple, actionable steps backed by strong real-life experience.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill 3: AI Tools and Prompting -->
+          <article class="skill-card sc-purple" tabindex="0">
+            <div class="skill-card-head">
+              <span class="skill-name">✨ AI Tools and Prompting</span>
+              <span class="skill-status-badge advanced">Pro</span>
+            </div>
+            <p class="skill-micro-summary">AI-assisted rapid building</p>
+            <div class="skill-expand-box">
+              <div class="skill-expand-inner">
+                <p class="skill-explanation">
+                  Expert at structured prompting with AI tools to architect, debug, and ship complete web projects fast.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill 4: Scratch -->
+          <article class="skill-card sc-amber" tabindex="0">
+            <div class="skill-card-head">
+              <span class="skill-name">🎮 Scratch</span>
+              <span class="skill-status-badge completed">CS50x</span>
+            </div>
+            <p class="skill-micro-summary">Visual game loop logic</p>
+            <div class="skill-expand-box">
+              <div class="skill-expand-inner">
+                <p class="skill-explanation">
+                  Built event-driven game mechanics, sprite collision detection, and scoring for Harvard's CS50x project.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Skill 5: Backend Development (learning) -->
+          <article class="skill-card sc-rose" tabindex="0">
+            <div class="skill-card-head">
+              <span class="skill-name">🖧 Backend Development (learning)</span>
+              <span class="skill-status-badge learning">Learning</span>
+            </div>
+            <p class="skill-micro-summary">APIs, servers &amp; data flow</p>
+            <div class="skill-expand-box">
+              <div class="skill-expand-inner">
+                <p class="skill-explanation">
+                  Currently learning server-side routing, REST APIs, databases, and how Python powers modern web backends.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- BLOCK 3: PROJECTS (12 Cols — 3 Organized Vibrant Cards) -->
+      <section id="projects" class="bento-block theme-violet block-projects">
+        <div class="block-header">
+          <div class="block-title-group">
+            <span class="block-icon-badge">🚀</span>
+            <div>
+              <h2 class="block-title">Projects</h2>
+              <p class="block-concise">3 hands-on builds combining logic, creativity &amp; AI</p>
+            </div>
+          </div>
+          <span class="hover-pill">Hover cards +</span>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project (a): DayForge -->
+          <article class="project-card p-blue" tabindex="0">
+            <div class="project-card-top">
+              <span class="project-tag-pill tag-blue">AI-Assisted Planner</span>
+              <span class="project-num">01</span>
+            </div>
+            <h3 class="project-title">DayForge</h3>
+            <p class="project-micro-summary">Hourly daily planner &amp; tracker</p>
+
+            <!-- Hover Expand Info -->
+            <div class="project-expand-box">
+              <div class="project-expand-inner">
+                <p class="project-core-desc">
+                  A daily planner that tracks what I plan to do in each hour and whether I completed it, built with AI assistance.
+                </p>
+                <div class="project-card-footer">
+                  <div class="tech-chips">
+                    <span>Hourly Grid</span>
+                    <span>Task Tracker</span>
+                    <span>AI Built</span>
+                  </div>
+                  <button type="button" class="preview-trigger-btn" data-modal="dayforge">
+                    Try Live Demo ↗
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project (b): Snake Game -->
+          <article class="project-card p-emerald" tabindex="0">
+            <div class="project-card-top">
+              <span class="project-tag-pill tag-emerald">CS50x Project</span>
+              <span class="project-num">02</span>
+            </div>
+            <h3 class="project-title">Snake Game</h3>
+            <p class="project-micro-summary">Working Scratch game for CS50x</p>
+
+            <!-- Hover Expand Info -->
+            <div class="project-expand-box">
+              <div class="project-expand-inner">
+                <p class="project-core-desc">
+                  A working snake game made in Scratch for my CS50x project.
+                </p>
+                <div class="project-card-footer">
+                  <div class="tech-chips">
+                    <span>Scratch</span>
+                    <span>CS50x</span>
+                    <span>Arcade Logic</span>
+                  </div>
+                  <button type="button" class="preview-trigger-btn btn-emerald" data-modal="snake">
+                    ▶ Play Mini Snake
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project (c): BunnyMilk Co. -->
+          <article class="project-card p-pink" tabindex="0">
+            <div class="project-card-top">
+              <span class="project-tag-pill tag-pink">Parody E-Commerce</span>
+              <span class="project-num">03</span>
+            </div>
+            <h3 class="project-title">BunnyMilk Co.</h3>
+            <p class="project-micro-summary">Parody rabbit-milk online store</p>
+
+            <!-- Hover Expand Info -->
+            <div class="project-expand-box">
+              <div class="project-expand-inner">
+                <p class="project-core-desc">
+                  A fun parody e-commerce website selling rabbit milk, built with AI.
+                </p>
+                <div class="project-card-footer">
+                  <div class="tech-chips">
+                    <span>Storefront UI</span>
+                    <span>Satire Brand</span>
+                    <span>AI Built</span>
+                  </div>
+                  <button type="button" class="preview-trigger-btn btn-pink" data-modal="bunnymilk">
+                    Inspect Store 🐇
+                  </button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- BLOCK 4: EDUCATION (6 Cols) -->
+      <section id="education" class="bento-block theme-emerald block-education">
+        <div class="block-header">
+          <div class="block-title-group">
+            <span class="block-icon-badge">🎓</span>
+            <div>
+              <h2 class="block-title">Education</h2>
+              <p class="block-concise">Computer Science academic journey</p>
+            </div>
+          </div>
+          <span class="hover-pill">Hover +</span>
+        </div>
+
+        <div class="compact-list">
+          <!-- Edu 1 -->
+          <article class="edu-item" tabindex="0">
+            <div class="edu-head">
+              <h3 class="edu-degree">B.Tech CSE Core</h3>
+              <span class="edu-badge badge-green">1st year, 2026–present</span>
+            </div>
+            <p class="edu-school">JECRC University, Jaipur</p>
+            <div class="edu-expand-box">
+              <div class="edu-expand-inner">
+                <p class="edu-detail-text">
+                  1st-year B.Tech Computer Science &amp; Engineering (Core) student at JECRC University, Jaipur—focusing on Python, problem-solving, and backend foundations.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Edu 2 -->
+          <article class="edu-item" tabindex="0">
+            <div class="edu-head">
+              <h3 class="edu-degree">Class 12</h3>
+              <span class="edu-badge badge-purple">69%</span>
+            </div>
+            <p class="edu-school">Eklavya International Academy &bull; 69%</p>
+            <div class="edu-expand-box">
+              <div class="edu-expand-inner">
+                <p class="edu-detail-text">
+                  Completed Senior Secondary (Class 12) at Eklavya International Academy with 69%, building core analytical and scientific fundamentals.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- BLOCK 5: CERTIFICATIONS / ACHIEVEMENTS (6 Cols) -->
+      <section id="certifications" class="bento-block theme-amber block-certifications">
+        <div class="block-header">
+          <div class="block-title-group">
+            <span class="block-icon-badge">🏆</span>
+            <div>
+              <h2 class="block-title">Certifications &amp; Achievements</h2>
+              <p class="block-concise">Completed milestones &amp; upcoming goals</p>
+            </div>
+          </div>
+          <span class="hover-pill">Hover +</span>
+        </div>
+
+        <div class="compact-list">
+          <!-- Cert 1 -->
+          <article class="cert-card" tabindex="0">
+            <div class="cert-row-top">
+              <span class="cert-emoji">🎮</span>
+              <div>
+                <h3 class="cert-title">Completed CS50x project (Scratch)</h3>
+                <p class="cert-micro">Harvard CS50x Scratch game milestone</p>
+              </div>
+            </div>
+            <div class="cert-expand-box">
+              <div class="cert-expand-inner">
+                <p>Built and shipped a complete working Snake Game in Scratch fulfilling Harvard CS50x's computational thinking specification.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 2 -->
+          <article class="cert-card" tabindex="0">
+            <div class="cert-row-top">
+              <span class="cert-emoji">🐍</span>
+              <div>
+                <h3 class="cert-title">Completed Python programming course</h3>
+                <p class="cert-micro">Core Python syntax &amp; scripting mastery</p>
+              </div>
+            </div>
+            <div class="cert-expand-box">
+              <div class="cert-expand-inner">
+                <p>Mastered Python fundamentals, control flow, functions, and data structures as a strong base for backend development.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cert 3 -->
+          <article class="cert-card cert-upcoming" tabindex="0">
+            <div class="cert-row-top">
+              <span class="cert-emoji">✨</span>
+              <div>
+                <h3 class="cert-title">More coming soon</h3>
+                <p class="cert-micro">Backend &amp; AI certifications in progress</p>
+              </div>
+            </div>
+            <div class="cert-expand-box">
+              <div class="cert-expand-inner">
+                <p>Actively working toward backend engineering certifications, REST API projects, and university hackathons.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- BLOCK 6: IMPROVISED WORKFLOW BLOCK (5 Cols) -->
+      <aside class="bento-block theme-rose block-radar" aria-label="How I Build">
+        <div class="block-header">
+          <div class="block-title-group">
+            <span class="block-icon-badge">🧭</span>
+            <div>
+              <h2 class="block-title">Tech Explorer</h2>
+              <p class="block-concise">How I turn ideas into working builds</p>
+            </div>
+          </div>
+          <span class="hover-pill">Hover +</span>
+        </div>
+
+        <div class="workflow-steps">
+          <div class="wf-step">
+            <span class="wf-num">1</span>
+            <span><strong>Spot the Problem</strong> &mdash; Real-life practical need</span>
+          </div>
+          <div class="wf-step">
+            <span class="wf-num">2</span>
+            <span><strong>Prompt &amp; Architect</strong> &mdash; Co-build with AI tools</span>
+          </div>
+          <div class="wf-step">
+            <span class="wf-num">3</span>
+            <span><strong>Code &amp; Refine</strong> &mdash; Python &amp; web execution</span>
+          </div>
+        </div>
+
+        <div class="block-expand-area">
+          <div class="block-expand-inner">
+            <p class="radar-expand-note">
+              <strong>2026 Focus:</strong> Exploring backend frameworks, APIs, and databases while discovering my long-term specialization in tech.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- BLOCK 7: CONTACT (7 Cols) -->
+      <section id="contact" class="bento-block theme-blue block-contact">
+        <div class="block-header">
+          <div class="block-title-group">
+            <span class="block-icon-badge">📬</span>
+            <div>
+              <h2 class="block-title">Contact</h2>
+              <p class="block-concise">Reach out directly via email or socials</p>
+            </div>
+          </div>
+          <span class="hover-pill">Hover +</span>
+        </div>
+
+        <div class="contact-compact-row">
+          <a href="mailto:harshitjangid8221@gmail.com" class="mailto-card">
+            <span class="mailto-icon">✉️</span>
+            <div class="mailto-text">
+              <span class="mailto-label">Direct Email (mailto)</span>
+              <span class="mailto-address">harshitjangid8221@gmail.com</span>
+            </div>
+            <span class="mailto-arrow">↗</span>
+          </a>
+
+          <div class="contact-secondary-btns">
+            <button type="button" class="btn-copy-email" id="copy-email-btn" data-email="harshitjangid8221@gmail.com">
+              <span id="copy-email-text">📋 Copy Email</span>
+            </button>
+            <a href="https://github.com/calsiummmm" target="_blank" rel="noopener noreferrer" class="contact-mini-social">
+              GitHub ↗
+            </a>
+            <a href="https://www.linkedin.com/in/harshit-jangid-8221cals" target="_blank" rel="noopener noreferrer" class="contact-mini-social">
+              LinkedIn ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Expandable Quick Mailto Topics on Hover -->
+        <div class="block-expand-area">
+          <div class="block-expand-inner">
+            <div class="contact-starters">
+              <span class="starter-label">One-Click Topics:</span>
+              <a href="mailto:harshitjangid8221@gmail.com?subject=Project%20Collaboration" class="starter-chip">🚀 Project Collab</a>
+              <a href="mailto:harshitjangid8221@gmail.com?subject=Hackathon%20Team%20Invite" class="starter-chip">⚡ Hackathon</a>
+              <a href="mailto:harshitjangid8221@gmail.com?subject=Hello%20Harshit!" class="starter-chip">👋 Say Hi</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== INTERACTIVE PROJECT PREVIEW MODAL ==================== -->
+  <div class="modal-backdrop" id="interactive-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span class="modal-badge" id="modal-badge">INTERACTIVE PREVIEW</span>
+          <h3 class="modal-title" id="modal-title">Project Simulation</h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close Preview">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <div class="footer-brand-row">
+          <img src="profile.png" alt="Harshit Jangid" class="footer-avatar" />
+          <span class="footer-logo">Harshit Jangid</span>
+        </div>
+        <p class="footer-copyright">&copy; 2026 Harshit Jangid</p>
+      </div>
+
+      <div class="footer-social-buttons">
+        <a href="https://github.com/calsiummmm" target="_blank" rel="noopener noreferrer" class="btn btn-social footer-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+          <span class="external-arrow">↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/harshit-jangid-8221cals" target="_blank" rel="noopener noreferrer" class="btn btn-social footer-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+          </svg>
+          <span>LinkedIn</span>
+          <span class="external-arrow">↗</span>
+        </a>
+        <a href="#home" class="btn btn-back-top" aria-label="Back to Top">↑ Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
